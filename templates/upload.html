@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uploads</title>
+     <link rel="stylesheet" href="{{url_for('static', filename='style2.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav>
+        <label class="logo">Hunter</label>
+        <ul>
+            <li><a href="{{url_for('home_page')}}">HOME</a></li>
+            <li><a href="{{url_for('about_page')}}">ABOUT</a></li>
+            <li><a href="{{url_for('service_page')}}">SERVICE</a></li>
+            <li><a href="{{url_for('contact_page')}}">CONTACT</a></li>
+            <li><a href="{{url_for('register_page')}}">REGISTER</a></li>
+        </ul>
+    </nav>
+    <form class="container" action="upload" method="post">
+        <input type="file" name="user_csv" class="upload-box"/>
+        <input type="submit" name="" value="View Data" class="sbutton">
+
+    </form>
+    <button class="analysis"><a href="{{url_for('analysis_page')}}">Analysis</a></button>
+    <button class="predict"><a href="{{url_for('prediction_page')}}">Predict</a></button>
+
+</body>
+</html>

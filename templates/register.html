@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+     <link rel="stylesheet" href="{{url_for('static', filename='style2.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav>
+        <label class="logo">Hunter</label>
+        <ul>
+            <li><a href="{{url_for('home_page')}}">HOME</a></li>
+            <li><a href="{{url_for('about_page')}}">ABOUT</a></li>
+            <li><a href="{{url_for('service_page')}}">SERVICE</a></li>
+            <li><a href="{{url_for('contact_page')}}">CONTACT</a></li>
+            <li><a href="{{url_for('register_page')}}">REGISTER</a></li>
+        </ul>
+    </nav>
+
+    <form action="/signup" method="post">
+        <div class="form">
+            <h2>Create Account</h2>
+            <input type="email" name="email" placeholder="Enter Email">
+            <input type="password" name="password" placeholder="password"><br>
+            <button type="submit" class="sbutton">Sign Up</button>
+
+            <p class="link">You have an account?<br>
+            <a href="{{url_for('home_page')}}">Login </a>here</p>
+        </div>
+    </form>
+
+</body>
+</html>

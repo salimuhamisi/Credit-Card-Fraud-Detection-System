@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+     <link rel="stylesheet" href="{{url_for('static', filename='style2.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav>
+        <label class="logo">Hunter</label>
+        <ul>
+            <li><a href="{{url_for('home_page')}}">HOME</a></li>
+            <li><a href="{{url_for('about_page')}}">ABOUT</a></li>
+            <li><a href="{{url_for('service_page')}}">SERVICE</a></li>
+            <li><a href="{{url_for('contact_page')}}">CONTACT</a></li>
+            <li><a href="{{url_for('register_page')}}">REGISTER</a></li>
+        </ul>
+    </nav>
+     {{ table|safe }}
+
+</body>
+</html>
